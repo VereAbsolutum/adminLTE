@@ -11,6 +11,7 @@ use Yii;
  * @property string $fantasia
  * @property string $n_inscricao
  * @property string $endereco
+ * @property int $cep
  *
  * @property Fornecedor[] $fornecedors
  */
@@ -30,7 +31,8 @@ class Empresa extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['fantasia', 'n_inscricao', 'endereco'], 'required'],
+            [['fantasia', 'n_inscricao', 'endereco', 'cep'], 'required'],
+            [['cep'], 'integer'],
             [['fantasia', 'endereco'], 'string', 'max' => 50],
             [['n_inscricao'], 'string', 'max' => 40],
         ];
@@ -46,6 +48,7 @@ class Empresa extends \yii\db\ActiveRecord
             'fantasia' => 'Fantasia',
             'n_inscricao' => 'N Inscricao',
             'endereco' => 'Endereco',
+            'cep' => 'Cep',
         ];
     }
 

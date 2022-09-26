@@ -32,7 +32,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => '@w
 </head>
 
 
-<body class="hold-transition sidebar-mini layout-fixed">
+<body class="hold-transition sidebar-mini sidebar-collapse layout-fixed">
     <?php $this->beginBody() ?>
         <div class="wrapper">
             <!-- Preloader -->

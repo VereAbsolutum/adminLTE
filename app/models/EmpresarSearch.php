@@ -17,7 +17,7 @@ class EmpresarSearch extends Empresa
     public function rules()
     {
         return [
-            [['id'], 'integer'],
+            [['id', 'cep'], 'integer'],
             [['fantasia', 'n_inscricao', 'endereco'], 'safe'],
         ];
     }
@@ -59,6 +59,7 @@ class EmpresarSearch extends Empresa
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
+            'cep' => $this->cep,
         ]);
 
         $query->andFilterWhere(['like', 'fantasia', $this->fantasia])
