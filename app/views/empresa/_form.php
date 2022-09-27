@@ -54,8 +54,9 @@ $script1 = <<< JS
                 const apiUrl = 'https://viacep.com.br/ws/' + cep + '/json/';
                 const response = await fetch(apiUrl);
                 const data = await response.json();
-                if(data.error){
+                if(data.erro){
                     //code goes here
+                    alert('CEP invalido, tente novamente.');
                     return
                 }
                 if(data.logradouro){
